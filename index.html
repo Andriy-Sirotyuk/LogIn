@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <title>app</title>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <div class="from-container sign-up">
+                <form>
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="https://www.google.com/" target="_blank">
+                            <img src="./img/google.svg" alt="$" />
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="./img/facebook-color.svg" alt="$" />
+                        </a>
+                        <a href="https://github.com/Andriy-Sirotyuk" target="_blank">
+                            <img src="./img/github.svg" alt="$" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/andrii-syrotiuk-301b64252/" target="_blank">
+                            <img src="./img/linkedin.svg" alt="$" />
+                        </a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <div class="box-input">
+                        <div>
+                            <input type="text" placeholder="name" />
+                        </div>
+                        <div>
+                            <input type="email" placeholder="email" />
+                        </div>
+                        <div class="password-container">
+                            <input
+                                type="password"
+                                placeholder="password"
+                                id="password"
+                                oninput="checkPasswordStrength('password', 'section1', 'section2', 'section3', '.text-ansver')"
+                                class="password-input" />
+                            <div class="password-strength">
+                                <div class="strength-section" id="section1"></div>
+                                <div class="strength-section" id="section2"></div>
+                                <div class="strength-section" id="section3"></div>
+                            </div>
+                            <button type="button" class="input-button" onclick="togglePasswordVisibility('password', 'firstButton')"></button>
+                            <p class="text-ansver ansver"></p>
+                        </div>
+                        <button class="purpl-btn" type="button">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="from-container sign-in">
+                <form>
+                    <h1>Sign In</h1>
+                    <div class="social-icons">
+                        <a href="https://www.google.com/" target="_blank">
+                            <img src="./img/google.svg" alt="$" />
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="./img/facebook-color.svg" alt="$" />
+                        </a>
+                        <a href="https://github.com/Andriy-Sirotyuk" target="_blank">
+                            <img src="./img/github.svg" alt="$" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/andrii-syrotiuk-301b64252/" target="_blank">
+                            <img src="./img/linkedin.svg" alt="$" />
+                        </a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <div class="box-input">
+                        <div>
+                            <input type="email" placeholder="email" />
+                        </div>
+                        <div class="fix-ays">
+                            <input
+                                type="password"
+                                placeholder="password"
+                                id="passwords"
+                                oninput="checkPasswordStrength('passwords', 'section11', 'section12', 'section13', '.text-ansvers')"
+                                class="password-input" />
+                        </div>
+                        <button class="purpl-btn" type="button">Sign In</button>
+                    </div>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcom Back!</h1>
+                        <p class="p-toggle">Enter your personal details to use all of site features</p>
+                        <button type="button" class="hidden purpl-btn" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, Friend!</h1>
+                        <p class="p-toggle">Register with your personal details to use all of site features</p>
+                        <button type="button" class="hidden purpl-btn" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/index.js" type="module"></script>
+    </body>
+</html>
